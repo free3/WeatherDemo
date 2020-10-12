@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b09b</color>
+    <color name="colorAccent">#96c93d</color>
+
+    <color name="colorContentTextHeader">#fff</color>
+    <color name="colorCitySearchArrowTint">#38ba79</color>
+
+    <!-- Generic colors -->
+    <color name="colorYellow">#ff0</color>
+    <color name="colorRed">#f00</color>
+    <color name="colorGreen">#0a0</color>
+    <color name="colorBlue">#00f</color>
+</resources>

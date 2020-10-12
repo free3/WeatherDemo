@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <!-- City Search: fields -->
+    <string name="text_enterCityName">ENTER CITY NAME</string>
+    <string name="text_viewHistory">VIEW HISTORY</string>
+
+    <!-- City Search: errors -->
+    <string name="error_no_items_in_history_yet">No items in history yet</string>
+    <string name="error_server_fault">Unable to get data. Could be server problem or internet connection issue</string>
+    <string name="error_city_blank">Enter city</string>
+    <string name="error_no_results_for_this_city">No results, try different city name</string>
+    <string name="error_history_lookups_unsuccessful">Unable to load your history. Might be data not available. Try again later</string>
+</resources>

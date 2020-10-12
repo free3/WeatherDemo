@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "lt.viskasnemokamai.weatherapp"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildFeatures {
+            viewBinding true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.core:core-ktx:1.0.2"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+
+    // apache commons
+    implementation "org.apache.commons:commons-lang3:$apache_commons_lang3"
+
+    // retrofit and network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_java_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_interceptor_version"
+
+    // Glide image loader
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+
+    // Room (for db)
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    testImplementation "junit:junit:$jUnit"
+    testImplementation "org.mockito:mockito-core:$mockito_core"
+    testImplementation "androidx.test:runner:$testRunner"
+    testImplementation "androidx.test.espresso:espresso-core:$espressoCore"
+    testImplementation "androidx.test.ext:junit:1.1.0"
+    testImplementation "org.robolectric:robolectric:$robolectric"
+
+    androidTestImplementation "org.mockito:mockito-android:$mockito_android"
+    androidTestImplementation "androidx.test:runner:$testRunner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCore"
+    androidTestImplementation "androidx.test.ext:junit:1.1.0"
+
+}

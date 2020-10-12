@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="160dp"
+    android:background="@drawable/background_rounded_rectangle"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvWeatherDesc"
+        style="@style/CityWeatherInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="..."
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCity"
+        style="@style/CityWeatherInformationBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="..."
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/CityWeatherInformationBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="...\n..."
+        />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        style="@style/CityWeatherInformationBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWeatherDesc"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textSize="80sp"
+        android:text="..."
+        />
+
+
+</RelativeLayout>
